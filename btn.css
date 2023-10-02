@@ -1,3 +1,4 @@
+/* Styles for the entire page body */
 body {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     background: #000;
 }
 
+/* Styles for elements with class 'glow-on-hover' */
 .glow-on-hover {
     width: 220px;
     height: 50px;
@@ -23,6 +25,12 @@ body {
     border-radius: 10px;
 }
 
+/*
+
+background: linear-gradient : This sets a linear gradient background for the pseudo-element. It's a smooth transition of colors from one side to another. The gradient is defined with multiple color stops and angles (45 degrees in this case).
+animation: glowing 20s linear infinite : This applies a CSS animation called glowing. It lasts for 20 seconds, has a linear timing function, and repeats infinitely.
+
+*/
 .glow-on-hover:before {
     content: '';
     background: linear-gradient(45deg, rgba(2,0,36,1), rgba(170,54,124,1), rgba(0,212,255,1), rgba(142,81,146,1), rgba(123,98,160,1), rgba(2,0,36,1));
@@ -40,14 +48,17 @@ body {
     border-radius: 10px;
 }
 
+/* Styles for when the element is active (clicked) */
 .glow-on-hover:active {
     color: #000
 }
 
+/* Styles for when the element is active */
 .glow-on-hover:active:after {
     background: transparent;
 }
 
+/* Styles for when the element is hovered over */
 .glow-on-hover:hover:before {
     opacity: 1;
 }
@@ -64,6 +75,7 @@ body {
     border-radius: 10px;
 }
 
+/* Keyframes animation for glowing effect */
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
